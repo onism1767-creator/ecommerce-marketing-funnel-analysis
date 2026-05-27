@@ -102,7 +102,7 @@ This suggests that the ecommerce site had stronger purchase performance during t
 
 From a marketing perspective, the next step would be to compare revenue trends with traffic source performance, campaign activity, and product-level performance. This would help determine whether revenue changes were driven by traffic volume, purchase intent, product demand, or campaign timing.
 
-### January Revenue Decline Diagnosis
+### January Revenue Decline problem
 
 January revenue declined sharply compared with December. Total revenue decreased from $160,555 in December to $57,350 in January, a decline of approximately 64.3%.
 
