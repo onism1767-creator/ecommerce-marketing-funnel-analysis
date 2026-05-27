@@ -60,19 +60,6 @@ This does not prove one specific root cause. The drop-off between `view_item` an
 
 Based on the current data, the strongest hypothesis is that the main opportunity is in the upper and middle funnel: helping more visitors discover relevant products and encouraging more product viewers to take the next step.
 
-### Recommended Next Analysis
-
-To identify the root cause more accurately, the next step should be to segment add-to-cart behavior by:
-
-- traffic source and medium
-- product category
-- item name
-- device type
-- landing page
-- product view count versus add-to-cart count
-
-This would help determine whether the drop-off is caused by low-quality traffic, weak product discovery, specific underperforming products, or product-page friction.
-
 ## 4. Purchase Performance
 
 The purchase revenue query analyzes daily purchase events, purchasing users, and total revenue from the GA4 ecommerce sample dataset.
@@ -100,7 +87,6 @@ Purchase activity and revenue were strongest in November and December, with Dece
 
 This suggests that the ecommerce site had stronger purchase performance during the earlier part of the dataset period, especially around late November and December. However, because this is an obfuscated sample dataset, the decline should be treated as an analytical observation rather than a definitive seasonal business conclusion.
 
-From a marketing perspective, the next step would be to compare revenue trends with traffic source performance, campaign activity, and product-level performance. This would help determine whether revenue changes were driven by traffic volume, purchase intent, product demand, or campaign timing.
 
 ### January Revenue Decline problem
 
@@ -111,8 +97,6 @@ However, this decline was not mainly driven by traffic volume. Users decreased b
 Revenue per purchase also decreased from $65.96 in December to $47.63 in January, a decline of approximately 27.8%.
 
 This suggests that January’s revenue decline was likely driven by two factors: fewer users converting into purchases, and lower average revenue per purchase. The data does not prove the exact cause, but possible explanations include lower post-holiday purchase intent, reduced promotional activity, lower-value products being purchased, weaker product demand, or changes in traffic quality.
-
-Further analysis should compare monthly funnel conversion rates, product category performance, and traffic source quality to determine whether the decline came from conversion behavior, product mix, or acquisition quality.
 
 ## 5. January Revenue Decline Diagnosis
 
@@ -160,20 +144,7 @@ The main funnel issue appears to be between `view_item` and `add_to_cart`. This 
 
 The drop in revenue per purchase also suggests that January buyers may have purchased lower-value items, smaller baskets, or fewer items per order. This means the revenue decline was likely not only a conversion problem, but also a purchase value problem.
 
-One data limitation is that the November cart-to-checkout rate is above 100%, which is not realistic for a strict step-by-step funnel. This may happen because the query counts unique users by month rather than tracking the same users through a single ordered path. It may also reflect limitations in the obfuscated GA4 sample dataset. Therefore, the analysis should focus more on month-to-month directional changes than on treating every funnel percentage as a perfect behavioral path.
-
-### Recommended Next Analysis
-
-To identify the root cause more accurately, the next analysis should compare:
-
-- add-to-cart rate by product category and item name
-- revenue by product category and item name
-- traffic source quality by month
-- average order value by month
-- product views versus cart additions by item
-- campaign and promotion activity by month
-
-This would help determine whether January’s decline was mainly caused by lower product appeal, weaker traffic quality, lower-value product mix, reduced promotion, or broader post-holiday demand changes.
+One data limitation is that the November cart-to-checkout rate is above 100%, which is not realistic for a strict step-by-step funnel. This may happen because the query counts unique users by month rather than tracking the same users through a single ordered path. It may also reflect limitations in the obfuscated GA4 sample dataset. 
 
 ## 6. Marketing Recommendations
 
