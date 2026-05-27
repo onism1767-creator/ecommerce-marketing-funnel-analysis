@@ -1,0 +1,38 @@
+-- 06_product_level_diagnosis.sql
+-- Purpose: Compare monthly product-level views, add-to-cart behavior, purchases, and revenue.
+
+SELECT
+  FORMAT_DATE('%Y-%m', PARSE_DATE('%Y%m%d', event_date)) AS month,
+  item.item_name AS item_name,
+  item.item_category AS item_category,
+
+  COUNTIF(event_name = 'view_item') AS product_view_events,
+  COUNTIF(event_name = 'add_to_cart') AS add_to_cart_events,
+  COUNTIF(event_name = 'purchase') AS purchase_events,
+
+  ROUND(SUM(
+    CASE
+      WHEN event_name = 'purchase' THEN COALESCE(item.item_revenue, 0)
+      ELSE 0
+    END
+  ), 2) AS item_revenue,
+
+  ROUND(
+    SAFE_DIVIDE(
+      COUNTIF(event_name = 'add_to_cart'),
+      COUNTIF(event_name = 'view_item')
+    ) * 100,
+    2
+  ) AS view_to_cart_rate
+
+FROM `bigquery-public-data.ga4_obfuscated_sample_ecommerce.events_*`,
+UNNEST(items) AS item
+WHERE event_name IN ('view_item', 'add_to_cart', 'purchase')
+GROUP BY
+  month,
+  item_name,
+  item_category
+HAVING product_view_events > 0
+ORDER BY
+  month,
+  item_revenue DESC;
