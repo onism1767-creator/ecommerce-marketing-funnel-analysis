@@ -114,6 +114,67 @@ This suggests that January’s revenue decline was likely driven by two factors:
 
 Further analysis should compare monthly funnel conversion rates, product category performance, and traffic source quality to determine whether the decline came from conversion behavior, product mix, or acquisition quality.
 
-## 5. Marketing Recommendations
+## 5. January Revenue Decline Diagnosis
+
+January showed a sharp revenue decline compared with December. To understand whether the decline was caused by lower traffic volume, weaker conversion behavior, or lower purchase value, this section compares monthly traffic, funnel movement, purchase activity, and revenue per purchase.
+
+### Monthly Performance Summary
+
+| Month | Users | Sessions | Purchase Events | Total Revenue | Revenue per Purchase |
+|---|---:|---:|---:|---:|---:|
+| 2020-11 | 79,421 | 106,585 | 2,054 | $144,260 | $70.23 |
+| 2020-12 | 104,315 | 131,836 | 2,434 | $160,555 | $65.96 |
+| 2021-01 | 94,790 | 116,549 | 1,204 | $57,350 | $47.63 |
+
+### Monthly Funnel Summary
+
+| Month | Session Users | Product View Users | Add-to-Cart Users | Checkout Users | Purchasing Users |
+|---|---:|---:|---:|---:|---:|
+| 2020-11 | 78,383 | 21,440 | 2,060 | 4,219 | 1,532 |
+| 2020-12 | 103,309 | 22,906 | 7,113 | 3,859 | 1,975 |
+| 2021-01 | 93,552 | 19,629 | 3,832 | 1,924 | 1,069 |
+
+### Monthly Funnel Conversion Rates
+
+| Month | Session → Product View | Product View → Cart | Cart → Checkout | Checkout → Purchase |
+|---|---:|---:|---:|---:|
+| 2020-11 | 27.35% | 9.61% | 204.81% | 36.31% |
+| 2020-12 | 22.17% | 31.05% | 54.25% | 51.18% |
+| 2021-01 | 20.98% | 19.52% | 50.21% | 55.56% |
+
+### Key Findings
+
+January revenue decreased from $160,555 in December to $57,350 in January, a decline of approximately 64.3%. However, this decline was not mainly caused by traffic volume. Users decreased by only 9.1%, and sessions decreased by 11.6%.
+
+The larger decline appeared in purchase behavior. Purchase events dropped from 2,434 in December to 1,204 in January, a decrease of approximately 50.5%. At the same time, revenue per purchase decreased from $65.96 to $47.63, a decline of approximately 27.8%.
+
+The monthly funnel data suggests that the biggest behavioral change happened between product viewing and add-to-cart. Product view users decreased from 22,906 to 19,629, a decrease of approximately 14.3%, while add-to-cart users decreased from 7,113 to 3,832, a decrease of approximately 46.1%. This means that users were still reaching product pages, but they were much less likely to add products to their cart in January.
+
+Checkout and purchasing users also declined sharply. Checkout users decreased by approximately 50.1%, and purchasing users decreased by approximately 45.9%. However, the checkout-to-purchase rate actually increased from 51.18% in December to 55.56% in January. This suggests that users who reached checkout were still relatively likely to complete a purchase. The larger issue appears to occur earlier, especially at the product consideration and add-to-cart stage.
+
+### Marketing Interpretation
+
+The data suggests that January’s revenue decline was driven by two main factors: weaker mid-funnel conversion and lower revenue per purchase.
+
+The main funnel issue appears to be between `view_item` and `add_to_cart`. This does not prove one specific root cause, but it suggests that January users had weaker purchase intent after viewing products. Possible explanations include lower post-holiday shopping demand, reduced promotional activity, less attractive product mix, pricing concerns, weaker product-page persuasion, or changes in traffic quality.
+
+The drop in revenue per purchase also suggests that January buyers may have purchased lower-value items, smaller baskets, or fewer items per order. This means the revenue decline was likely not only a conversion problem, but also a purchase value problem.
+
+One data limitation is that the November cart-to-checkout rate is above 100%, which is not realistic for a strict step-by-step funnel. This may happen because the query counts unique users by month rather than tracking the same users through a single ordered path. It may also reflect limitations in the obfuscated GA4 sample dataset. Therefore, the analysis should focus more on month-to-month directional changes than on treating every funnel percentage as a perfect behavioral path.
+
+### Recommended Next Analysis
+
+To identify the root cause more accurately, the next analysis should compare:
+
+- add-to-cart rate by product category and item name
+- revenue by product category and item name
+- traffic source quality by month
+- average order value by month
+- product views versus cart additions by item
+- campaign and promotion activity by month
+
+This would help determine whether January’s decline was mainly caused by lower product appeal, weaker traffic quality, lower-value product mix, reduced promotion, or broader post-holiday demand changes.
+
+## 6. Marketing Recommendations
 
 To be completed after comparing traffic source performance and funnel drop-off.
