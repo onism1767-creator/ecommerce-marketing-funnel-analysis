@@ -1,4 +1,0 @@
-month,session_users,product_view_users,add_to_cart_users,checkout_users,purchasing_users,session_to_product_view_rate,product_view_to_cart_rate,cart_to_checkout_rate,checkout_to_purchase_rate
-2020-11,78383,21440,2060,4219,1532,27.35,9.61,204.81,36.31
-2020-12,103309,22906,7113,3859,1975,22.17,31.05,54.25,51.18
-2021-01,93552,19629,3832,1924,1069,20.98,19.52,50.21,55.56
