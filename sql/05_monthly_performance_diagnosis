@@ -17,3 +17,58 @@ SELECT
 FROM `bigquery-public-data.ga4_obfuscated_sample_ecommerce.events_*`
 GROUP BY month
 ORDER BY month;
+
+-- 05_monthly_funnel_diagnosis.sql
+-- Purpose: Compare monthly funnel performance to identify where January conversion declined.
+
+SELECT
+  FORMAT_DATE('%Y-%m', PARSE_DATE('%Y%m%d', event_date)) AS month,
+
+  COUNT(DISTINCT IF(event_name = 'session_start', user_pseudo_id, NULL)) AS session_users,
+  COUNT(DISTINCT IF(event_name = 'view_item', user_pseudo_id, NULL)) AS product_view_users,
+  COUNT(DISTINCT IF(event_name = 'add_to_cart', user_pseudo_id, NULL)) AS add_to_cart_users,
+  COUNT(DISTINCT IF(event_name = 'begin_checkout', user_pseudo_id, NULL)) AS checkout_users,
+  COUNT(DISTINCT IF(event_name = 'purchase', user_pseudo_id, NULL)) AS purchasing_users,
+
+  ROUND(
+    SAFE_DIVIDE(
+      COUNT(DISTINCT IF(event_name = 'view_item', user_pseudo_id, NULL)),
+      COUNT(DISTINCT IF(event_name = 'session_start', user_pseudo_id, NULL))
+    ) * 100,
+    2
+  ) AS session_to_product_view_rate,
+
+  ROUND(
+    SAFE_DIVIDE(
+      COUNT(DISTINCT IF(event_name = 'add_to_cart', user_pseudo_id, NULL)),
+      COUNT(DISTINCT IF(event_name = 'view_item', user_pseudo_id, NULL))
+    ) * 100,
+    2
+  ) AS product_view_to_cart_rate,
+
+  ROUND(
+    SAFE_DIVIDE(
+      COUNT(DISTINCT IF(event_name = 'begin_checkout', user_pseudo_id, NULL)),
+      COUNT(DISTINCT IF(event_name = 'add_to_cart', user_pseudo_id, NULL))
+    ) * 100,
+    2
+  ) AS cart_to_checkout_rate,
+
+  ROUND(
+    SAFE_DIVIDE(
+      COUNT(DISTINCT IF(event_name = 'purchase', user_pseudo_id, NULL)),
+      COUNT(DISTINCT IF(event_name = 'begin_checkout', user_pseudo_id, NULL))
+    ) * 100,
+    2
+  ) AS checkout_to_purchase_rate
+
+FROM `bigquery-public-data.ga4_obfuscated_sample_ecommerce.events_*`
+WHERE event_name IN (
+  'session_start',
+  'view_item',
+  'add_to_cart',
+  'begin_checkout',
+  'purchase'
+)
+GROUP BY month
+ORDER BY month;
