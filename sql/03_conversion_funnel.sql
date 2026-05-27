@@ -1,3 +1,7 @@
+03_conversion_funnel.sql
+-- Conversion funnel analysis for GA4 ecommerce sample data
+-- Purpose: Measure how users move through key ecommerce funnel stages.
+
 SELECT
   event_name,
   COUNT(*) AS event_count,
