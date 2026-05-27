@@ -34,7 +34,44 @@ This suggests that the ecommerce site relies heavily on organic search and direc
 
 ## 3. Funnel Drop-off
 
-To be completed after running `sql/03_conversion_funnel.sql`.
+The ecommerce funnel tracks how users move from starting a session to viewing a product, adding an item to cart, beginning checkout, and completing a purchase.
+
+| Funnel Step | Event Count | Users | Conversion from Previous Step |
+|---|---:|---:|---:|
+| session_start | 354,970 | 267,116 | 100.0% |
+| view_item | 386,068 | 61,252 | 22.9% |
+| add_to_cart | 58,543 | 12,545 | 20.5% |
+| begin_checkout | 38,757 | 9,715 | 77.4% |
+| purchase | 5,692 | 4,419 | 45.5% |
+
+### Key Findings
+
+The largest drop-off occurs between `session_start` and `view_item`. Out of 267,116 users who started a session, only 61,252 users viewed a product, meaning only 22.9% of users reached the product-view stage.
+
+The second major drop-off occurs between `view_item` and `add_to_cart`. Out of 61,252 users who viewed a product, only 12,545 users added an item to cart, meaning 20.5% of product viewers moved to cart activity.
+
+After users added an item to cart, the continuation rate improved. 77.4% of users who added an item to cart began checkout, and 45.5% of users who began checkout completed a purchase. This suggests that the biggest friction points appear earlier in the funnel, before users commit to checkout.
+
+### Marketing Interpretation
+
+The data shows that the site loses many users before they engage deeply with products, especially between site entry and product view, and again between product view and add-to-cart.
+
+This does not prove one specific root cause. The drop-off between `view_item` and `add_to_cart` may be related to product-page content, pricing, product relevance, CTA visibility, traffic quality, or user intent. More segmented analysis is needed before making a final conclusion.
+
+Based on the current data, the strongest hypothesis is that the main opportunity is in the upper and middle funnel: helping more visitors discover relevant products and encouraging more product viewers to take the next step.
+
+### Recommended Next Analysis
+
+To identify the root cause more accurately, the next step should be to segment add-to-cart behavior by:
+
+- traffic source and medium
+- product category
+- item name
+- device type
+- landing page
+- product view count versus add-to-cart count
+
+This would help determine whether the drop-off is caused by low-quality traffic, weak product discovery, specific underperforming products, or product-page friction.
 
 ## 4. Purchase Performance
 
