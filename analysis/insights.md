@@ -102,6 +102,18 @@ This suggests that the ecommerce site had stronger purchase performance during t
 
 From a marketing perspective, the next step would be to compare revenue trends with traffic source performance, campaign activity, and product-level performance. This would help determine whether revenue changes were driven by traffic volume, purchase intent, product demand, or campaign timing.
 
+### January Revenue Decline Diagnosis
+
+January revenue declined sharply compared with December. Total revenue decreased from $160,555 in December to $57,350 in January, a decline of approximately 64.3%.
+
+However, this decline was not mainly driven by traffic volume. Users decreased by only 9.1%, and sessions decreased by 11.6%. In comparison, purchase events decreased by 50.5%, from 2,434 purchases in December to 1,204 purchases in January.
+
+Revenue per purchase also decreased from $65.96 in December to $47.63 in January, a decline of approximately 27.8%.
+
+This suggests that January’s revenue decline was likely driven by two factors: fewer users converting into purchases, and lower average revenue per purchase. The data does not prove the exact cause, but possible explanations include lower post-holiday purchase intent, reduced promotional activity, lower-value products being purchased, weaker product demand, or changes in traffic quality.
+
+Further analysis should compare monthly funnel conversion rates, product category performance, and traffic source quality to determine whether the decline came from conversion behavior, product mix, or acquisition quality.
+
 ## 5. Marketing Recommendations
 
 To be completed after comparing traffic source performance and funnel drop-off.
