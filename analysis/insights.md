@@ -146,6 +146,54 @@ The drop in revenue per purchase also suggests that January buyers may have purc
 
 One data limitation is that the November cart-to-checkout rate is above 100%, which is not realistic for a strict step-by-step funnel. This may happen because the query counts unique users by month rather than tracking the same users through a single ordered path. It may also reflect limitations in the obfuscated GA4 sample dataset. 
 
-## 6. Marketing Recommendations
+## 6. Product-Level Diagnosis
+
+To further investigate the January revenue decline, this section compares monthly product category performance, including product views, add-to-cart events, purchase events, revenue, and view-to-cart rate.
+
+### Revenue by Major Product Category
+
+| Item Category | Dec Revenue | Jan Revenue | Revenue Change | Purchase Events Dec | Purchase Events Jan | Dec View-to-Cart Rate | Jan View-to-Cart Rate |
+|---|---:|---:|---:|---:|---:|---:|---:|
+| Apparel | $62,625 | $28,765 | -54.1% | 1,772 | 759 | 36.7% | 24.5% |
+| Bags | $12,343 | $2,480 | -79.9% | 288 | 89 | 14.7% | 10.3% |
+| Campus Collection | $8,503 | $1,838 | -78.4% | 581 | 181 | 56.3% | 35.8% |
+| Drinkware | $7,812 | $1,702 | -78.2% | 317 | 96 | 37.8% | 26.5% |
+| Lifestyle | $5,480 | $2,540 | -53.6% | 233 | 101 | 29.7% | 17.4% |
+| Shop by Brand | $3,327 | $1,403 | -57.8% | 251 | 70 | 43.3% | 28.2% |
+
+### Key Findings
+
+The January revenue decline was concentrated in several major product categories. Apparel remained the largest revenue category, but its revenue decreased from $62,625 in December to $28,765 in January, a decline of approximately 54.1%. Apparel purchase events also decreased from 1,772 to 759.
+
+Other major categories declined even more sharply. Bags revenue decreased by approximately 79.9%, Campus Collection decreased by 78.4%, and Drinkware decreased by 78.2%. These category-level declines suggest that January’s revenue drop was not caused by one isolated product only. Instead, several important product categories experienced weaker purchase performance.
+
+The view-to-cart rate also declined across major categories. For example, Apparel dropped from 36.7% to 24.5%, Campus Collection dropped from 56.3% to 35.8%, and Drinkware dropped from 37.8% to 26.5%. This supports the earlier funnel finding that January users were less likely to move from product viewing to cart activity.
+
+### Top Item-Level Revenue Drops
+
+Several individual products also showed large revenue decreases from December to January:
+
+| Item Name | Category | Dec Revenue | Jan Revenue | Revenue Drop |
+|---|---|---:|---:|---:|
+| Google Zip Hoodie F/C | Apparel | $5,496 | $1,632 | -$3,864 |
+| Google Men's Tech Fleece Grey | Apparel | $4,139 | $1,172 | -$2,967 |
+| Google Canteen Bottle Black | Drinkware | $3,550 | $619 | -$2,931 |
+| Google Utility BackPack | Bags | $2,832 | $0 | -$2,832 |
+| Google Men's Puff Jacket Black | Apparel | $3,151 | $598 | -$2,553 |
+| Google Men's Tech Fleece Vest Charcoal | Apparel | $2,931 | $489 | -$2,442 |
+| Google Badge Heavyweight Pullover Black | Apparel | $2,965 | $656 | -$2,309 |
+| Google Incognito Techpack V2 | Bags | $2,793 | $560 | -$2,233 |
+
+### Marketing Interpretation
+
+The product-level data suggests that January’s revenue decline was likely connected to weaker product demand or weaker product-level conversion, especially in high-revenue categories such as Apparel, Bags, Campus Collection, and Drinkware.
+
+This aligns with the previous monthly funnel diagnosis. January users were still reaching product pages, but they were less likely to add products to cart. The category-level view-to-cart rate decline supports the idea that the main issue happened during the product consideration stage.
+
+The decline in revenue per purchase may also be partly explained by product mix. If January buyers purchased fewer high-value products or shifted toward lower-value items, total revenue would fall faster than purchase volume alone.
+
+However, this analysis still does not prove the exact cause. Possible explanations include lower post-holiday demand, fewer promotions, weaker product relevance, pricing concerns, reduced interest in specific categories, or changes in traffic quality.
+
+## 7. Marketing Recommendations
 
 To be completed after comparing traffic source performance and funnel drop-off.
