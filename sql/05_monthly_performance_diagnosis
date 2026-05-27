@@ -1,0 +1,19 @@
+-- 05_monthly_performance_diagnosis.sql
+-- Purpose: Compare monthly users, sessions, purchases, revenue, and average order value.
+
+SELECT
+  FORMAT_DATE('%Y-%m', PARSE_DATE('%Y%m%d', event_date)) AS month,
+  COUNT(DISTINCT user_pseudo_id) AS users,
+  COUNTIF(event_name = 'session_start') AS sessions,
+  COUNTIF(event_name = 'purchase') AS purchase_events,
+  ROUND(SUM(COALESCE(ecommerce.purchase_revenue, 0)), 2) AS total_revenue,
+  ROUND(
+    SAFE_DIVIDE(
+      SUM(COALESCE(ecommerce.purchase_revenue, 0)),
+      COUNTIF(event_name = 'purchase')
+    ),
+    2
+  ) AS revenue_per_purchase
+FROM `bigquery-public-data.ga4_obfuscated_sample_ecommerce.events_*`
+GROUP BY month
+ORDER BY month;
