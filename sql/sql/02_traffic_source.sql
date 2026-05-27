@@ -1,3 +1,7 @@
+-- 02_traffic_source.sql
+-- Traffic source analysis for GA4 ecommerce sample data
+-- Purpose: Identify which traffic sources, mediums, and campaigns bring the most users and events.
+
 SELECT
   traffic_source.source AS source,
   traffic_source.medium AS medium,
