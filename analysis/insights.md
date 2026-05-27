@@ -75,7 +75,32 @@ This would help determine whether the drop-off is caused by low-quality traffic,
 
 ## 4. Purchase Performance
 
-To be completed after running `sql/04_purchase_revenue.sql`.
+The purchase revenue query analyzes daily purchase events, purchasing users, and total revenue from the GA4 ecommerce sample dataset.
+
+| Metric | Value |
+|---|---:|
+| Total purchase events | 5,692 |
+| Total revenue | $362,165 |
+| Average daily revenue | $3,936.58 |
+| Average daily purchase events | 61.87 |
+| Highest revenue day | 2020-11-30 |
+| Highest daily revenue | $11,990 |
+
+### Monthly Revenue Summary
+
+| Month | Purchase Events | Total Revenue | Average Daily Revenue |
+|---|---:|---:|---:|
+| 2020-11 | 2,054 | $144,260 | $4,808.67 |
+| 2020-12 | 2,434 | $160,555 | $5,179.19 |
+| 2021-01 | 1,204 | $57,350 | $1,850.00 |
+
+### Initial Insight
+
+Purchase activity and revenue were strongest in November and December, with December generating the highest total revenue at $160,555. January showed a clear decline, with total revenue dropping to $57,350.
+
+This suggests that the ecommerce site had stronger purchase performance during the earlier part of the dataset period, especially around late November and December. However, because this is an obfuscated sample dataset, the decline should be treated as an analytical observation rather than a definitive seasonal business conclusion.
+
+From a marketing perspective, the next step would be to compare revenue trends with traffic source performance, campaign activity, and product-level performance. This would help determine whether revenue changes were driven by traffic volume, purchase intent, product demand, or campaign timing.
 
 ## 5. Marketing Recommendations
 
